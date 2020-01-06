@@ -1,0 +1,124 @@
+@import 'vars';
+@import 'fonts';
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:500|Poppins:300,400,700|Roboto:400,700|Ubuntu&display=swap');
+
+// ---------------------------------Roboto
+@mixin r4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+@mixin r7 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+// ---------------------------------Ubuntu
+@mixin u4 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+// ---------------------------------Poppins
+@mixin p3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+@mixin p4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+@mixin p7 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+// ---------------------------------Cormorant
+@mixin c5 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+// ----------------------------------Var
+$main-color: #61e9c2;
+$main-bg: #e9e9e9;
+$text1: #8f8f8f;
+$text2: #323237;
+$text3: #999999;
+$social-link-bg: #151515;
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  color: #323237;
+  @include p4;
+  font-size: 15px;
+  background-color: $main-color;
+  position: relative;
+  z-index: 1;
+  transition: all .3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $main-color;
+    border-radius: 2px;
+    z-index: -1;
+    transition: all .3s;
+  }
+}
