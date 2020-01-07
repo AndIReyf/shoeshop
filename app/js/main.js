@@ -5,4 +5,29 @@ $(function () {
     $('html, body').toggleClass('lock');
   });
 
+  $('.about-slider__wrap').slick({
+    infinite: true,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"><img src="../images/arrow-l.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="../images/arrow-r.svg" alt=""></button>',
+    responsive: [{
+      breakpoint: 1150,
+      settings: {
+        arrows: false,
+        dots: true
+      }
+    }]
+  });
+
+  $('.blog__slider').slick({
+    infinite: true,
+    fade: true,
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
 });

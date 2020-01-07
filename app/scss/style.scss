@@ -429,7 +429,7 @@
 // =================================Header Finished
 
 
-// =================================Main Product Finished
+// =================================Main Product Start
 
 .main-product {
   padding: 100px 0 80px;
@@ -547,7 +547,7 @@
 // =================================Main Product Finished
 
 
-// =================================Popular Finished
+// =================================Popular Start
 
 .popular {
   padding-bottom: 100px;
@@ -658,7 +658,7 @@
 // =================================Popular Finished
 
 
-// =================================Collection Finished
+// =================================Collection Start
 
 .collection {
   padding-bottom: 200px;
@@ -753,7 +753,296 @@
 // =================================Collection Finished
 
 
-// =================================Footer Finished
+// =================================About slider Start
+
+.about-slider {
+  padding: 100px 0;
+  background-color: $main-bg;
+
+  @media (max-width: 720px) {
+    padding-top: 50px;
+  }
+
+  &__wrap {
+    text-align: center;
+  }
+
+  &__title {
+    @include c5;
+    font-size: 45px;
+    color: $text2;
+    margin-bottom: 30px;
+
+    @media (max-width: 720px) {
+      font-size: 38px;
+    }
+  }
+
+  &__text {
+    @include p3;
+    font-size: 15px;
+    max-width: 860px;
+    margin: 0 auto;
+    color: $text3;
+    padding-bottom: 30px;
+    line-height: 24px;
+  }
+
+  &__name {
+    @include p4;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  &__prof {
+    @include p4;
+    font-size: 15px;
+    color: $text4;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    font: 400 0px Arial;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    left: -114px;
+
+    @media (max-width: 1410px) {
+      left: 0;
+    }
+  }
+
+  .slick-next {
+    right: -114px;
+
+    @media (max-width: 1410px) {
+      right: 0;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+    display: flex;
+
+    .slick-active {
+      button {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    li+li {
+      margin-left: 30px;
+    }
+
+    button {
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg);
+      background-color: $text4;
+    }
+  }
+}
+
+// =================================About Slider Finished
+
+
+// =================================Blog Start
+
+.blog {
+  padding: 100px 0 200px;
+
+  @media (max-width: 900px) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: 580px) {
+    padding-bottom: 100px;
+  }
+
+  &-title {
+    text-align: center;
+    @include c5;
+    font-size: 45px;
+    color: $text2;
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    display: flex !important;
+    justify-content: space-around;
+
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 720px) {
+      flex-direction: initial;
+    }
+  }
+
+  &__box:first-child {
+    flex: 0 1 36.333%;
+
+    @media (max-width: 900px) {
+      flex: 0 1 50%;
+    }
+
+    @media (max-width: 580px) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__box:last-child {
+    flex: 0 1 auto;
+    width: 570px;
+    align-self: auto;
+    position: relative;
+
+    @media (max-width: 900px) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__img {
+    padding-bottom: 104%;
+    position: relative;
+
+    @media (max-width: 580px) {
+      padding-bottom: 60%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      border: 5px solid $border;
+      border-radius: 3px;
+      width: 70%;
+      height: 70%;
+      left: -60px;
+      top: -50px;
+      z-index: -1;
+    }
+
+    .decor {
+      position: absolute;
+      width: 265px;
+      height: 350px;
+      right: -150px;
+      bottom: -140px;
+      z-index: -1;
+      background-image: linear-gradient(0deg, rgb(101, 224, 188) 0%, rgb(201, 249, 235) 100%);
+
+      @media (max-width: 900px) {
+        bottom: -60px;
+      }
+
+      @media (max-width: 580px) {
+        right: 0;
+        bottom: -130px;
+        transform: rotate(90deg);
+      }
+
+      span {
+        position: absolute;
+        right: 15px;
+        bottom: -9px;
+        height: 100%;
+        width: 50%;
+        font-size: 10em;
+        @include p7;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        color: rgba(#fff, .35);
+
+        @media (max-width: 580px) {
+          color: rgba(#fff, .2);
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-left: 10px;
+
+    @media (max-width: 900px) {
+      margin-left: 0;
+    }
+
+    &-link {
+      @media (max-width: 900px) {
+        margin-left: inherit;
+      }
+
+      @media (max-width: 580px) {
+        margin: 0 auto; 
+      }
+    }
+  }
+
+  &__slider {
+    .slick-list {
+      overflow: visible;
+    }
+
+    .slick-dots {
+      display: flex;
+      position: absolute;
+      right: 5%;
+      bottom: 0;
+
+      @media (max-width: 580px) {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        bottom: -50px;
+      }
+
+      li {
+        padding: 0 15px;
+      }
+
+      .slick-active {
+        button {
+          width: 15px;
+          height: 15px;
+          background-color: rgba($text4, 1);
+        }
+      }
+
+      button {
+        width: 10px;
+        height: 10px;
+        font: 400 0px Arial;
+        padding: 0;
+        background-color: rgba($text4, .7);
+        border: none;
+        outline: none;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// =================================Blog Finished
+
+
+// =================================Footer Start
 
 .footer {
 
@@ -848,7 +1137,7 @@
         width: 350px;
       }
 
-      @media (max-width: 680px){
+      @media (max-width: 680px) {
         width: 460px;
       }
 
