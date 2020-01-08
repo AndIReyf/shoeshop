@@ -10,8 +10,8 @@ $(function () {
     fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: '<button type="button" class="slick-prev"><img src="../images/arrow-l.svg" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="../images/arrow-r.svg" alt=""></button>',
+    prevArrow: '<button type="button" class="slick-prev"><img src="../images/arrow-l.png" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="../images/arrow-r.png" alt=""></button>',
     responsive: [{
       breakpoint: 1150,
       settings: {
@@ -28,6 +28,9 @@ $(function () {
     dots: true,
     slidesToShow: 1,
     slidesToScroll: 1
+  });
+
+  new WOW().init({
   });
 
 });

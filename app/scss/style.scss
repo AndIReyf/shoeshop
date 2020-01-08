@@ -704,10 +704,11 @@
       position: absolute;
       right: -100px;
       bottom: -100px;
-      z-index: -1;
+      z-index: -2;
       width: 293px;
       height: 388px;
       background-image: linear-gradient(90deg, rgb(101, 224, 188) 0%, rgb(201, 249, 235) 100%);
+      animation: bounceInDown 4.5s;
 
       @media (max-width: 600px) {
         width: 190px;
